@@ -11,18 +11,18 @@ import Foundation
 final public class DoubleCalculator: Calculator {
     public typealias Value = Double
     public func add(_ a: Double, to b: Double) -> CalculationResult<Double> {
-        return .NaN
+        return .value(a+b)
     }
     
     public func subtract(from a: Double, _ b: Double) -> CalculationResult<Double> {
-        return .NaN
+        return .value(a-b)
     }
     
     public func multiply(_ a: Double, by b: Double) -> CalculationResult<Double> {
-        return .NaN
+        return .value(a*b)
     }
     
     public func divide(_ a: Double, by b: Double) -> CalculationResult<Double> {
-        return .NaN
+        return b == 0.0 ? .NaN : .value(a/b)
     }
 }

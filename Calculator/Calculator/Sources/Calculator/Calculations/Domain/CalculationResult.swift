@@ -8,11 +8,11 @@
 
 import Foundation
 
-public enum CalculationResult<T> {
-    case value(T)
+public enum CalculationResult {
+    case value(ValueDisplayable)
     case NaN
     
-    var value: T? {
+    var value: ValueDisplayable? {
         switch self {
         case .value(let result):
             return result

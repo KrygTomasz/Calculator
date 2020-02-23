@@ -10,19 +10,19 @@ import Foundation
 
 final public class DoubleCalculator: Calculator {
     public typealias Value = Double
-    public func add(_ a: Double, to b: Double) -> CalculationResult<Double> {
+    public func add(_ a: Value, to b: Value) -> CalculationResult {
         return .value(a+b)
     }
     
-    public func subtract(from a: Double, _ b: Double) -> CalculationResult<Double> {
+    public func subtract(from a: Value, _ b: Value) -> CalculationResult {
         return .value(a-b)
     }
     
-    public func multiply(_ a: Double, by b: Double) -> CalculationResult<Double> {
+    public func multiply(_ a: Value, by b: Value) -> CalculationResult {
         return .value(a*b)
     }
     
-    public func divide(_ a: Double, by b: Double) -> CalculationResult<Double> {
+    public func divide(_ a: Value, by b: Value) -> CalculationResult {
         return b == 0.0 ? .NaN : .value(a/b)
     }
 }

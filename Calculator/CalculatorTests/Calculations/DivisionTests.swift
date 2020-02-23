@@ -13,10 +13,6 @@ class DivisionTests: XCTestCase {
     
     let calculator = DoubleCalculator()
     
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
     func testDividePositiveNumbers() {
         let a: Double = 5.0
         let b: Double = 8.0

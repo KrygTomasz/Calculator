@@ -12,10 +12,6 @@ import XCTest
 class AdditionTests: XCTestCase {
 
     let calculator = DoubleCalculator()
-    
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
 
     func testAddPositiveNumbers() {
         let a: Double = 2.1

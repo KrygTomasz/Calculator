@@ -70,6 +70,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2316D7062402F93700C67A9C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				23DFEDEC2402E491004B76CA /* AppDelegate.swift */,
+				23DFEDEE2402E491004B76CA /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2316D7302402F97D00C67A9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23DFEDFA2402E493004B76CA /* Info.plist */,
+				23DFEDF72402E493004B76CA /* LaunchScreen.storyboard */,
+				23DFEDF22402E493004B76CA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2316D7312402F98400C67A9C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2316D7322403148E00C67A9C /* Calculator */,
+				2316D7062402F93700C67A9C /* Core */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2316D7322403148E00C67A9C /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				2316D7332403149600C67A9C /* View */,
+				23DFEE0E2402E5F7004B76CA /* Calculations */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		2316D7332403149600C67A9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23DFEDF02402E491004B76CA /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		23DFEDE02402E491004B76CA = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +136,8 @@
 		23DFEDEB2402E491004B76CA /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				23DFEE0E2402E5F7004B76CA /* Calculations */,
-				23DFEDEC2402E491004B76CA /* AppDelegate.swift */,
-				23DFEDEE2402E491004B76CA /* SceneDelegate.swift */,
-				23DFEDF02402E491004B76CA /* ContentView.swift */,
-				23DFEDF22402E493004B76CA /* Assets.xcassets */,
-				23DFEDF72402E493004B76CA /* LaunchScreen.storyboard */,
-				23DFEDFA2402E493004B76CA /* Info.plist */,
+				2316D7302402F97D00C67A9C /* Resources */,
+				2316D7312402F98400C67A9C /* Sources */,
 				23DFEDF42402E493004B76CA /* Preview Content */,
 			);
 			path = Calculator;
@@ -430,7 +470,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = UX7WS379DF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = Calculator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +490,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = UX7WS379DF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = Calculator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

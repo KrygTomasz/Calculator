@@ -17,42 +17,49 @@ class DivisionTests: XCTestCase {
         let a: Double = 5.0
         let b: Double = 8.0
         let result = calculator.divide(a, by: b)
-        XCTAssert(result == CalculationResult<Double>.value(0.625))
+        XCTAssertEqual(result.value, 0.625)
     }
     
     func testDivideNegativeNumberByPositiveNumber() {
         let a: Double = -2.4
         let b: Double = 1.2
         let result = calculator.divide(a, by: b)
-        XCTAssert(result == CalculationResult<Double>.value(-2.0))
+        XCTAssertEqual(result.value, -2.0)
     }
     
     func testDividePositiveNumberByNegativeNumber() {
         let a: Double = 6.25
         let b: Double = -2.5
         let result = calculator.divide(a, by: b)
-        XCTAssert(result == CalculationResult<Double>.value(-2.5))
+        XCTAssertEqual(result.value, -2.5)
     }
     
     func testDivideNegativeNumbers() {
         let a: Double = -9.3
         let b: Double = -3
         let result = calculator.divide(a, by: b)
-        XCTAssert(result == CalculationResult<Double>.value(3.1))
+        XCTAssertEqual(result.value, 3.1)
     }
     
     func testDivideByNeutralElement() {
         let a: Double = 12.3
         let neutral: Double = 1.0
         let result = calculator.divide(a, by: neutral)
-        XCTAssert(result == CalculationResult<Double>.value(a))
+        XCTAssertEqual(result.value, a)
     }
     
     func testDivideByZero() {
         let a: Double = 12.3
         let b: Double = 0.0
         let result = calculator.divide(a, by: b)
-        XCTAssert(result == CalculationResult<Double>.NaN)
+        var nanResult = false
+        switch result {
+        case .NaN:
+            nanResult = true
+        default: break
+        }
+        XCTAssertTrue(nanResult)
+        XCTAssertNil(result.value)
     }
 
 }

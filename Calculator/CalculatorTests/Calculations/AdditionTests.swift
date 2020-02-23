@@ -17,35 +17,35 @@ class AdditionTests: XCTestCase {
         let a: Double = 2.1
         let b: Double = 15.4
         let result = calculator.add(a, to: b)
-        XCTAssert(result == CalculationResult<Double>.value(17.5))
+        XCTAssertEqual(result.value, 17.5)
     }
     
     func testAddPositiveNumberToNegativeNumber() {
         let a: Double = 5.0
         let b: Double = -8.0
         let result = calculator.add(a, to: b)
-        XCTAssert(result == CalculationResult<Double>.value(-3.0))
+        XCTAssertEqual(result.value, -3.0)
     }
     
     func testAddNegativeNumberToPositiveNumber() {
         let a: Double = -8.0
         let b: Double = 5.0
         let result = calculator.add(a, to: b)
-        XCTAssert(result == CalculationResult<Double>.value(-3.0))
+        XCTAssertEqual(result.value, -3.0)
     }
     
     func testAddNegativeNumbers() {
         let a: Double = -12.0
         let b: Double = -29.0
         let result = calculator.add(a, to: b)
-        XCTAssert(result == CalculationResult<Double>.value(-41.0))
+        XCTAssertEqual(result.value, -41.0)
     }
     
     func testAddNeutralElement() {
         let a: Double = 12.3
         let neutral: Double = 0.0
         let result = calculator.add(a, to: neutral)
-        XCTAssert(result == CalculationResult<Double>.value(a))
+        XCTAssertEqual(result.value, a)
     }
 
 }

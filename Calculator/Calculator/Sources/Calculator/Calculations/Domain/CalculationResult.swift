@@ -8,18 +8,16 @@
 
 import Foundation
 
-public enum CalculationResult<T: Equatable>: Equatable {
+public enum CalculationResult<T> {
     case value(T)
     case NaN
     
-    public static func == (lhs: CalculationResult<T>, rhs: CalculationResult<T>) -> Bool {
-        switch (lhs, rhs) {
-        case (.NaN, .NaN):
-            return true
-        case (.value(let firstValue), .value(let secondValue)):
-            return firstValue == secondValue
+    var value: T? {
+        switch self {
+        case .value(let result):
+            return result
         default:
-            return false
+            return nil
         }
     }
 }
